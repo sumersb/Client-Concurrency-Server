@@ -64,9 +64,12 @@ public class ClientThreadManager {
 
         float wallTime = (endTime - startTime) * MILLISECOND_TO_SECOND;
 
+
         //ITERATIONS_PER_THREAD multiplied BY 2 to account for get and post request
         float throughput = (float) numThreadGroups * threadGroupSize*2*ITERATIONS_PER_THREAD / wallTime;
 
+
+        //Prints out all information
         System.out.println("Number Thread Groups: " + numThreadGroups);
 
         System.out.println("Thread Group Size: " + threadGroupSize);

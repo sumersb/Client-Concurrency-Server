@@ -35,6 +35,7 @@ public class ClientThreadManager {
         //Create digest store to calculate percentiles
         MergingDigest digest = new MergingDigest(100);
 
+        //Creates writer instance to process callInfo information of all threads
         Writer writer = new Writer(callInfoQueue, digest);
         writer.start();
 

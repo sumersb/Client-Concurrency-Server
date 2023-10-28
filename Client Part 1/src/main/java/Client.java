@@ -10,7 +10,6 @@ import java.io.*;
 
 public class Client extends Thread {
 
-    private String url;
     private int iterations;
     private HttpClient client;
     private PostMethod postMethod;
@@ -18,7 +17,6 @@ public class Client extends Thread {
 
 
         public Client(String url, int iterations) {
-            this.url = url;
             this.iterations = iterations;
             client = new HttpClient();
 
@@ -34,6 +32,7 @@ public class Client extends Thread {
             postMethod.getParams().setParameter(HttpMethodParams.RETRY_HANDLER,
                     new DefaultHttpMethodRetryHandler(5, false));
 
+            // Create a get method instance
             getMethod = new GetMethod(url+"/1");
 
 
@@ -45,15 +44,16 @@ public class Client extends Thread {
 
     for (int i = 0; i<iterations ; i++) {
         try {
-            // Execute the method.
+            // Execute the post method.
             statusCode = client.executeMethod(postMethod);
 
             if (statusCode != HttpStatus.SC_CREATED) {
                 System.err.println("Method failed: " + postMethod.getStatusLine());
             }
 
-            statusCode = client.executeMethod(getMethod);
 
+            // Execute the get method.
+            statusCode = client.executeMethod(getMethod);
             if (statusCode != HttpStatus.SC_OK) {
                 System.err.println("Method failed: " + getMethod.getStatusLine());
             }

@@ -32,6 +32,7 @@ public class Writer extends Thread {
     }
 
     public void run() {
+        //Creates variables to track throughput every second
         long throughputEndTime = 0;
         long callEndTime;
         int callCount = 0;
@@ -59,6 +60,7 @@ public class Writer extends Thread {
                     minLatency = Math.min(minLatency,latency);
                     callEndTime = callInfo.getStartTime() + latency;
 
+                    //Calculates and prints throughput every second
                     if (callEndTime>=throughputEndTime) {
                         System.out.print("("+second+","+callCount+"),");
                         throughputEndTime=callEndTime+MILLISECONDS_PER_SECOND;

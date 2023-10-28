@@ -39,7 +39,7 @@ public class Client extends Thread {
         postMethod.setRequestHeader("accept", "application/json");
         postMethod.getParams().setParameter(HttpMethodParams.RETRY_HANDLER,
                 new DefaultHttpMethodRetryHandler(5, false));
-
+        // Create a get method instance
         getMethod = new GetMethod(url+"/1");
 
     }
@@ -52,7 +52,7 @@ public class Client extends Thread {
     public void startupThread() {
         int statusCode;
 
-
+        //Iterates 1000 times calling post then get method
         for (int i = 0; i<iterations ; i++) {
             try {
                 // Execute the method.
@@ -87,7 +87,7 @@ public class Client extends Thread {
         long endTime;
         long latency;
 
-
+        //Iterates 1000 times calling post then get method
         for (int i = 0; i<iterations ; i++) {
             try {
                 // Execute the method.
@@ -100,6 +100,7 @@ public class Client extends Thread {
                 }
                 endTime = System.currentTimeMillis();
                 latency = endTime - startTime;
+                //Takes request information and passes instance of CallInfo to latency Queue
                 latencyQueue.add(new CallInfo(startTime,"POST",latency,statusCode));
 
 
@@ -110,6 +111,7 @@ public class Client extends Thread {
                 }
                 endTime = System.currentTimeMillis();
                 latency = endTime - startTime;
+                //Takes request information and passes instance of CallInfo to latency Queue
                 latencyQueue.add(new CallInfo(startTime,"GET",latency,statusCode));
 
 
