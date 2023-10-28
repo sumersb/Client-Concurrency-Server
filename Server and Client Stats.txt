@@ -1,0 +1,117 @@
+Client 1
+
+Java Server Client 1
+
+Number Thread Groups: 10
+Thread Group Size: 10
+Server Calls: 200000
+Wall Time: 86.073006 seconds
+Throughput: 2323.609 calls per second
+
+Number Thread Groups: 20
+Thread Group Size: 10
+Server Calls: 400000
+Wall Time: 153.824 seconds
+Throughput: 2600.3743 calls per second
+
+Number Thread Groups: 30
+Thread Group Size: 10
+Server Calls: 600000
+Wall Time: 222.21501 seconds
+Throughput: 2700.0876 calls per second
+
+Go Server Client 1
+
+Number Thread Groups: 10
+Thread Group Size: 10
+Server Calls: 200000
+Wall Time: 89.393005 seconds
+Throughput: 2237.3115 calls per second
+
+Number Thread Groups: 20
+Thread Group Size: 10
+Server Calls: 400000
+Wall Time: 154.13701 seconds
+Throughput: 2595.0938 calls per second
+
+Number Thread Groups: 30
+Thread Group Size: 10
+Server Calls: 600000
+Wall Time: 222.098 seconds
+Throughput: 2701.51 calls per second
+
+Java Server Client 2
+
+Number Thread Groups: 10
+Thread Group Size: 10
+Server Calls: 200000
+Wall Time: 86.51 seconds
+Throughput: 2311.8713 calls per second
+Mean: 33.857025
+Median: 33.49837510355383
+99 Percentile: 52.06291040348659
+Max Latency: 329
+Min Latency: 18
+
+
+Number Thread Groups: 20
+Thread Group Size: 10
+Server Calls: 400000
+Wall Time: 153.55501 seconds
+Throughput: 2604.9297 calls per second
+Mean: 59.10994
+Median: 64.52561833251355
+99 Percentile: 87.5373524113628
+Max Latency: 336
+Min Latency: 17
+
+Number Thread Groups: 30
+Thread Group Size: 10
+Server Calls: 600000
+Wall Time: 222.376 seconds
+Throughput: 2698.1328 calls per second
+Mean: 84.15502
+Median: 92.59311158821585
+99 Percentile: 122.64470934364917
+Max Latency: 369
+Min Latency: 18
+
+Go Server Client 2
+
+Number Thread Groups: 10
+Thread Group Size: 10
+Server Calls: 200000
+Wall Time: 87.04401 seconds
+Throughput: 2297.6885 calls per second
+Mean: 33.32544
+Median: 32.740568635937976
+99 Percentile: 54.0155238303902
+Max Latency: 265
+Min Latency: 16
+
+Number Thread Groups: 20
+Thread Group Size: 10
+Server Calls: 400000
+Wall Time: 152.654 seconds
+Throughput: 2620.3047 calls per second
+Mean: 58.00527
+Median: 62.61328883053245
+99 Percentile: 89.87816540065992
+Max Latency: 264
+Min Latency: 16
+
+
+Number Thread Groups: 30
+Thread Group Size: 10
+Server Calls: 600000
+Wall Time: 221.57501 seconds
+Throughput: 2707.8865 calls per second
+Mean: 83.37368
+Median: 91.16908114355
+99 Percentile: 123.60451682266773
+Max Latency: 1003
+Min Latency: 16
+
+
+
+
